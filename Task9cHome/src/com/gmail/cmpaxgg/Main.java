@@ -12,13 +12,13 @@ public class Main {
 		// TODO Auto-generated method stub
 		File file = new File("Documentation.txt");
 		try {
-			NumberofReplaySymbol(file);
+			numberofReplaySymbol(file);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
 	}
 
-	public static void NumberofReplaySymbol(File file) throws IOException{
+	public static void numberofReplaySymbol(File file) throws IOException{
 		Files.lines(Paths.get(file.getAbsolutePath()))
 		.map(n -> n.toUpperCase())
 		.flatMapToInt(n -> n.chars())
